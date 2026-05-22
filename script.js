@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     /* ==========================================
-       2. LIVE EMAIL SUBMISSION ENGINE
+       2. LIVE EMAIL SUBMISSION ENGINE (BOOKING)
        ========================================== */
     const bookingForm = document.getElementById("bookingForm");
     
@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             // Trigger transmission over the server API
-            // REPLACE "YOUR_SERVICE_ID" and "YOUR_TEMPLATE_ID" with your real dashboard tags
             emailjs.send("service_nqvhc5f", "template_q8pzmje", templateParams)
                 .then(function(response) {
                     console.log("SUCCESS!", response.status, response.text);
@@ -128,9 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 contact_message: document.getElementById("contactMessage").value
             };
 
-            // Trigger the server API transmission packet
-            // REMEMBER: Use your same Service ID, but paste your new Contact Template ID here
-            emailjs.send("service_nqvhc5f", "template_Idc1s4e", contactParams)
+            // FIXED: Standardized Template ID format to lowercase 'ldc1s4e'
+            emailjs.send("service_nqvhc5f", "template_ldc1s4e", contactParams)
                 .then(function(response) {
                     console.log("CONTACT SUCCESS!", response.status, response.text);
                     

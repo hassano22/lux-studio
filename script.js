@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             // FIXED: Standardized Template ID format to lowercase 'ldc1s4e'
-            emailjs.send("service_nqvhc5f", "template_ldc1s4e", contactParams)
+            emailjs.send("service_nqvhc5f", "template_dsstjz6", contactParams)
                 .then(function(response) {
                     console.log("CONTACT SUCCESS!", response.status, response.text);
                     
